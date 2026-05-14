@@ -21,13 +21,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PBM App 2026',
+      title: 'Toko Emas App 2026',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: const ColorScheme.dark(
-          primary: Color(0xFF6C63FF),
-          secondary: Color(0xFF3ECFCF),
-          background: Color(0xFF0F0F1A),
+          primary: Color(0xFFFFD700),
+          secondary: Color(0xFFD4AF37),
+          background: Color(0xFF1A1610),
         ),
         useMaterial3: true,
       ),
@@ -81,7 +81,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F1A),
+      backgroundColor: const Color(0xFF1A1610),
       body: Center(
         child: ScaleTransition(
           scale: _scaleAnim,
@@ -93,28 +93,28 @@ class _SplashScreenState extends State<SplashScreen>
                 height: 88,
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
-                    colors: [Color(0xFF6C63FF), Color(0xFF3ECFCF)],
+                    colors: [Color(0xFFFFD700), Color(0xFFD4AF37)],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
                   borderRadius: BorderRadius.circular(24),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFF6C63FF).withOpacity(0.4),
+                      color: const Color(0xFFFFD700).withOpacity(0.4),
                       blurRadius: 30,
                       offset: const Offset(0, 10),
                     ),
                   ],
                 ),
                 child: const Icon(
-                  Icons.storefront_rounded,
+                  Icons.monetization_on_rounded,
                   color: Colors.white,
                   size: 44,
                 ),
               ),
               const SizedBox(height: 20),
               const Text(
-                'PBM App',
+                'Toko Emas App',
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.w800,
@@ -124,7 +124,7 @@ class _SplashScreenState extends State<SplashScreen>
               ),
               const SizedBox(height: 6),
               const Text(
-                'Praktikum 2026',
+                'Emas Berkualitas',
                 style: TextStyle(
                   fontSize: 13,
                   color: Colors.white38,

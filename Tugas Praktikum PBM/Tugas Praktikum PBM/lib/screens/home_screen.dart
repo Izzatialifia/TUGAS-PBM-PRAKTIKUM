@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (_) => AlertDialog(
-        backgroundColor: const Color(0xFF1C1C2E),
+        backgroundColor: const Color(0xFF29241C),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: Text(
           'Hapus Produk',
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F1A),
+      backgroundColor: const Color(0xFF1A1610),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,14 +152,14 @@ class _HomeScreenState extends State<HomeScreen> {
               child: _isLoading
                   ? const Center(
                       child: CircularProgressIndicator(
-                        color: Color(0xFF6C63FF),
+                        color: Color(0xFFFFD700),
                       ),
                     )
                   : _products.isEmpty
                       ? _buildEmptyState()
                       : RefreshIndicator(
                           onRefresh: _fetchProducts,
-                          color: const Color(0xFF6C63FF),
+                          color: const Color(0xFFFFD700),
                           child: ListView.builder(
                             padding: const EdgeInsets.fromLTRB(20, 0, 20, 100),
                             itemCount: _products.length,
@@ -182,8 +182,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 MaterialPageRoute(builder: (_) => const SubmitScreen()),
               );
             },
-            backgroundColor: const Color(0xFF3ECFCF),
-            foregroundColor: const Color(0xFF0F0F1A),
+            backgroundColor: const Color(0xFFD4AF37),
+            foregroundColor: const Color(0xFF1A1610),
             icon: const Icon(Icons.send_rounded),
             label: Text(
               'Submit',
@@ -200,7 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
               if (added == true) _fetchProducts();
             },
-            backgroundColor: const Color(0xFF6C63FF),
+            backgroundColor: const Color(0xFFFFD700),
             child: const Icon(Icons.add_rounded, color: Colors.white),
           ),
         ],
@@ -218,12 +218,12 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 44,
             decoration: BoxDecoration(
               gradient: const LinearGradient(
-                colors: [Color(0xFF6C63FF), Color(0xFF3ECFCF)],
+                colors: [Color(0xFFFFD700), Color(0xFFD4AF37)],
               ),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Icon(
-              Icons.storefront_rounded,
+              Icons.monetization_on_rounded,
               color: Colors.white,
               size: 22,
             ),
@@ -272,14 +272,14 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF6C63FF), Color(0xFF3ECFCF)],
+          colors: [Color(0xFFFFD700), Color(0xFFD4AF37)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(18),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF6C63FF).withOpacity(0.3),
+            color: const Color(0xFFFFD700).withOpacity(0.3),
             blurRadius: 20,
             offset: const Offset(0, 6),
           ),
@@ -386,9 +386,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        color: const Color(0xFF1C1C2E),
+        color: const Color(0xFF29241C),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF2A2A3E), width: 1),
+        border: Border.all(color: const Color(0xFF473E2F), width: 1),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -399,12 +399,12 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: const Color(0xFF6C63FF).withOpacity(0.15),
+                color: const Color(0xFFFFD700).withOpacity(0.15),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: const Icon(
                 Icons.inventory_2_outlined,
-                color: Color(0xFF6C63FF),
+                color: Color(0xFFFFD700),
                 size: 24,
               ),
             ),
@@ -429,7 +429,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     style: GoogleFonts.plusJakartaSans(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: const Color(0xFF3ECFCF),
+                      color: const Color(0xFFD4AF37),
                     ),
                   ),
                   if (p.description.isNotEmpty) ...[

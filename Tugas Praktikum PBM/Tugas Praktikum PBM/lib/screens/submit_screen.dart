@@ -25,7 +25,7 @@ class _SubmitScreenState extends State<SubmitScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (_) => AlertDialog(
-        backgroundColor: const Color(0xFF1C1C2E),
+        backgroundColor: const Color(0xFF29241C),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: Text(
           'Konfirmasi Submit',
@@ -47,14 +47,14 @@ class _SubmitScreenState extends State<SubmitScreen> {
           ElevatedButton(
             onPressed: () => Navigator.pop(context, true),
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF3ECFCF),
+              backgroundColor: const Color(0xFFD4AF37),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
             ),
             child: Text(
               'Submit',
               style: GoogleFonts.plusJakartaSans(
-                color: const Color(0xFF0F0F1A),
+                color: const Color(0xFF1A1610),
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -102,9 +102,9 @@ class _SubmitScreenState extends State<SubmitScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F1A),
+      backgroundColor: const Color(0xFF1A1610),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF0F0F1A),
+        backgroundColor: const Color(0xFF1A1610),
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded,
@@ -136,7 +136,7 @@ class _SubmitScreenState extends State<SubmitScreen> {
               height: 100,
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [Color(0xFF22C55E), Color(0xFF3ECFCF)],
+                  colors: [Color(0xFF22C55E), Color(0xFFD4AF37)],
                 ),
                 shape: BoxShape.circle,
                 boxShadow: [
@@ -175,7 +175,7 @@ class _SubmitScreenState extends State<SubmitScreen> {
               child: ElevatedButton(
                 onPressed: () => Navigator.pop(context),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF6C63FF),
+                  backgroundColor: const Color(0xFFFFD700),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14)),
                 ),
@@ -205,22 +205,22 @@ class _SubmitScreenState extends State<SubmitScreen> {
             Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                color: const Color(0xFF3ECFCF).withOpacity(0.1),
+                color: const Color(0xFFD4AF37).withOpacity(0.1),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                    color: const Color(0xFF3ECFCF).withOpacity(0.3), width: 1),
+                    color: const Color(0xFFD4AF37).withOpacity(0.3), width: 1),
               ),
               child: Row(
                 children: [
                   const Icon(Icons.info_outline_rounded,
-                      color: Color(0xFF3ECFCF), size: 18),
+                      color: Color(0xFFD4AF37), size: 18),
                   const SizedBox(width: 10),
                   Expanded(
                     child: Text(
                       'Data tidak dapat diubah setelah submit. Pastikan data sudah benar!',
                       style: GoogleFonts.plusJakartaSans(
                         fontSize: 12,
-                        color: const Color(0xFF3ECFCF),
+                        color: const Color(0xFFD4AF37),
                       ),
                     ),
                   ),
@@ -285,7 +285,7 @@ class _SubmitScreenState extends State<SubmitScreen> {
               child: ElevatedButton(
                 onPressed: _isLoading ? null : _submit,
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF3ECFCF),
+                  backgroundColor: const Color(0xFFD4AF37),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14)),
                   elevation: 0,
@@ -295,18 +295,18 @@ class _SubmitScreenState extends State<SubmitScreen> {
                         width: 22,
                         height: 22,
                         child: CircularProgressIndicator(
-                            color: Color(0xFF0F0F1A), strokeWidth: 2.5),
+                            color: Color(0xFF1A1610), strokeWidth: 2.5),
                       )
                     : Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           const Icon(Icons.send_rounded,
-                              color: Color(0xFF0F0F1A), size: 18),
+                              color: Color(0xFF1A1610), size: 18),
                           const SizedBox(width: 8),
                           Text(
                             'Submit Tugas',
                             style: GoogleFonts.plusJakartaSans(
-                              color: const Color(0xFF0F0F1A),
+                              color: const Color(0xFF1A1610),
                               fontSize: 16,
                               fontWeight: FontWeight.w700,
                             ),
@@ -355,18 +355,18 @@ class _SubmitScreenState extends State<SubmitScreen> {
             ? Icon(icon, color: Colors.white38, size: 20)
             : null,
         filled: true,
-        fillColor: const Color(0xFF1C1C2E),
+        fillColor: const Color(0xFF29241C),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF2A2A3E), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF473E2F), width: 1.5),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF3ECFCF), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFFD4AF37), width: 1.5),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),

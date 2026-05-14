@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F1A),
+      backgroundColor: const Color(0xFF1A1610),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -106,21 +106,21 @@ class _LoginScreenState extends State<LoginScreen>
                           height: 72,
                           decoration: BoxDecoration(
                             gradient: const LinearGradient(
-                              colors: [Color(0xFF6C63FF), Color(0xFF3ECFCF)],
+                              colors: [Color(0xFFFFD700), Color(0xFFD4AF37)],
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
                             ),
                             borderRadius: BorderRadius.circular(20),
                             boxShadow: [
                               BoxShadow(
-                                color: const Color(0xFF6C63FF).withOpacity(0.4),
+                                color: const Color(0xFFFFD700).withOpacity(0.4),
                                 blurRadius: 24,
                                 offset: const Offset(0, 8),
                               ),
                             ],
                           ),
                           child: const Icon(
-                            Icons.storefront_rounded,
+                            Icons.monetization_on_rounded,
                             color: Colors.white,
                             size: 36,
                           ),
@@ -145,7 +145,6 @@ class _LoginScreenState extends State<LoginScreen>
                       ),
                       const SizedBox(height: 36),
 
-                      // NIM Field
                       _buildLabel('NIM'),
                       const SizedBox(height: 8),
                       _buildTextField(
@@ -158,7 +157,6 @@ class _LoginScreenState extends State<LoginScreen>
                       ),
                       const SizedBox(height: 20),
 
-                      // Password Field
                       _buildLabel('Password'),
                       const SizedBox(height: 8),
                       _buildTextField(
@@ -182,14 +180,13 @@ class _LoginScreenState extends State<LoginScreen>
                       ),
                       const SizedBox(height: 36),
 
-                      // Login Button
                       SizedBox(
                         width: double.infinity,
                         height: 54,
                         child: ElevatedButton(
                           onPressed: _isLoading ? null : _login,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF6C63FF),
+                            backgroundColor: const Color(0xFFFFD700),
                             foregroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(14),
@@ -218,7 +215,7 @@ class _LoginScreenState extends State<LoginScreen>
                       const SizedBox(height: 24),
                       Center(
                         child: Text(
-                          'Praktikum PBM 2026',
+                          'Toko Emas Premium',
                           style: GoogleFonts.plusJakartaSans(
                             fontSize: 12,
                             color: Colors.white24,
@@ -268,18 +265,18 @@ class _LoginScreenState extends State<LoginScreen>
         prefixIcon: Icon(icon, color: Colors.white38, size: 20),
         suffixIcon: suffixIcon,
         filled: true,
-        fillColor: const Color(0xFF1C1C2E),
+        fillColor: const Color(0xFF29241C),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF2A2A3E), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF473E2F), width: 1.5),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF6C63FF), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFFFFD700), width: 1.5),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),

@@ -66,9 +66,9 @@ class _AddProductScreenState extends State<AddProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF0F0F1A),
+      backgroundColor: const Color(0xFF1A1610),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF0F0F1A),
+        backgroundColor: const Color(0xFF1A1610),
         elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded,
@@ -95,7 +95,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
               const SizedBox(height: 8),
               _buildField(
                 controller: _nameController,
-                hint: 'cth. MacBook Pro M5 Silver',
+                hint: '',
                 icon: Icons.label_outline_rounded,
                 validator: (v) =>
                     v == null || v.isEmpty ? 'Nama tidak boleh kosong' : null,
@@ -105,7 +105,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
               const SizedBox(height: 8),
               _buildField(
                 controller: _priceController,
-                hint: 'cth. 32450000',
+                hint: '',
                 icon: Icons.attach_money_rounded,
                 keyboardType: TextInputType.number,
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
@@ -133,7 +133,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _submit,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF6C63FF),
+                    backgroundColor: const Color(0xFFFFD700),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(14)),
                     elevation: 0,
@@ -196,18 +196,18 @@ class _AddProductScreenState extends State<AddProductScreen> {
             ? Icon(icon, color: Colors.white38, size: 20)
             : null,
         filled: true,
-        fillColor: const Color(0xFF1C1C2E),
+        fillColor: const Color(0xFF29241C),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
           borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF2A2A3E), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFF473E2F), width: 1.5),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
-          borderSide: const BorderSide(color: Color(0xFF6C63FF), width: 1.5),
+          borderSide: const BorderSide(color: Color(0xFFFFD700), width: 1.5),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(14),
